@@ -17,7 +17,7 @@ A boolean value to determine whether the class should be added or removed.
 ## Scheduling
 This method's handler can wait for timeouts and intervals to complete before invoking the callback by providing proxies for setTimeout, clearTimeout, setInterval, and clearInterval.
 
-If scheduling is needed, the handler will provide the functions in the following order
+If scheduling is needed, the handler will provide the functions in the following order:
 ```
 toggleClassAfter( function( setTimeout, clearTimeout, setInterval, clearInterval ) )
 ```
