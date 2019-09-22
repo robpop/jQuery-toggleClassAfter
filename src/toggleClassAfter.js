@@ -1,6 +1,6 @@
 /*
   Author: Robert F. Popeleski <therfp97@gmail.com>
-  License: MIT
+  License: WTFPL
 */
 (function ( $ ) {
   $.fn.toggleClassAfter = function( value, func, stateVal ) {
