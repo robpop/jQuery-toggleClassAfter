@@ -1,6 +1,12 @@
 # jQuery-toggleClassAfter
 jQuery plugin that invokes a handler and then makes a callback to toggleClass()
 
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/robpop/jQuery-toggleClassAfter)
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/robpop/jQuery-toggleClassAfter)
+![GitHub](https://img.shields.io/github/license/robpop/jQuery-toggleClassAfter)
+![GitHub top language](https://img.shields.io/github/languages/top/robpop/jQuery-toggleClassAfter)
+
+
 ## Usage
 ### toggleClassAfter( className, handler, state )
 This method takes three arguments:   
