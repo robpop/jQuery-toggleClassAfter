@@ -26,7 +26,7 @@ toggleClassAfter( function( setTimeout, clearTimeout, setInterval, clearInterval
 The example below will toggle the class *bar* after executing the handler.
 ```
 var count = 0;
-$( "#foo" ).toggleClassAfter("bar", function() {
+$( "#foo" ).toggleClassAfter( "bar", function() {
   for ( var i = 0; i < 4; i++ ) {
     count++;
   }
@@ -36,7 +36,7 @@ The examples below will toggle the class *bar* after executing the handler with 
 ```
 var count = 0;
 var interval;
-$( "#foo" ).toggleClassAfter("bar", function( setTimeout, clearTimeout, setInterval, clearInterval ) {
+$( "#foo" ).toggleClassAfter( "bar", function( setTimeout, clearTimeout, setInterval, clearInterval ) {
   interval = setInterval( function() {
     count++;
     if ( count > 3 ) {
@@ -47,7 +47,7 @@ $( "#foo" ).toggleClassAfter("bar", function( setTimeout, clearTimeout, setInter
 ```
 ```
 var count = 0;
-$( "#foo" ).toggleClassAfter("bar", function( setTimeout, clearTimeout, setInterval, clearInterval ) {
+$( "#foo" ).toggleClassAfter( "bar", function( setTimeout, clearTimeout, setInterval, clearInterval ) {
   setTimeout( function() {
     count++;
     if ( count > 1 ) {
