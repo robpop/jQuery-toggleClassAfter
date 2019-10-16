@@ -14,8 +14,8 @@
       intervals = [],
 
       // Make a call to toggleClass if no additional timeouts or intervals are present
-      callback = function() {
-        window.setTimeout( function() {
+      callback = () => {
+        window.setTimeout( () => {
           if ( timeouts.length <= 0 && intervals.length <= 0 ) {
             return jQuery( self ).toggleClass( value, stateVal );
           }
@@ -23,28 +23,28 @@
       },
 
       // Proxy setTimeout, setInterval, clearTimeout, and clearInterval for internal use
-      timeout = function( func, duration ) {
+      timeout = ( func, duration ) => {
       	timeouts.push(
-      		window.setTimeout( function() {
+      		window.setTimeout( () => {
       			timeouts.shift();
       			callback();
       		}, duration )
       	);
       	return window.setTimeout( func, duration );
       },
-      ctimeout = function( id ) {
+      ctimeout = ( id ) => {
       	window.clearTimeout( timeouts.indexOf( timeouts[ id ] ) );
       	timeouts.splice( timeouts.indexOf( timeouts[ id ] ), 1 );
       	window.clearTimeout( id );
       	callback();
       },
-      interval = function( func, duration ) {
+      interval = ( func, duration ) => {
       	intervals.push(
       		window.setInterval( func, duration )
       	);
       	return intervals[ intervals.length - 1 ];
       },
-      cinterval = function( id ) {
+      cinterval = ( id ) => {
       	intervals.splice( intervals.indexOf( intervals[ id ] ), 1 );
       	window.clearInterval( id );
       	callback();
