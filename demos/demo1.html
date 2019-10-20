@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>toggleClassAfter demo1</title>
+
+  <style>
+    #foo {
+      width: 100px;
+      height: 100px;
+    }
+    .bar {
+      background: #cc00ff;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="foo"></div>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="../src/toggleClassAfter.min.js"></script>
+
+  <script>
+    var count = 0;
+    var interval;
+    $( "#foo" ).toggleClassAfter( "bar", ( setTimeout, clearTimeout, setInterval, clearInterval ) => {
+      interval = setInterval( () => {
+        count++;
+        if ( count > 3 ) {
+          clearInterval( interval );
+        }
+      }, 1000 );
+    } );
+  </script>
+</body>
+</html>
