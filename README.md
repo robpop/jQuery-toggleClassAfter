@@ -14,7 +14,7 @@ This method takes three arguments:
 One or more class names (separated by spaces) to be toggled for each element in the matched set.    
 
 *handler*   
-A function to execute before making a callback to [toggleClass()](https://api.jquery.com/toggleClass/#toggleClass-className).   
+A function to execute before making a callback to [toggleClass()](https://api.jquery.com/toggleClass/).   
 
 *state*   
 A boolean value to determine whether the class should be added or removed.    
